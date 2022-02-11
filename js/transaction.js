@@ -1,9 +1,9 @@
 function getInputValue(id) {
-    const depositInput = document.getElementById(id);
-    const depositAmount = parseFloat(depositInput.value);
+    const inputField = document.getElementById(id);
+    const amount = parseFloat(inputField.value);
     // Clear deposit input
-    depositInput.value = '';
-    return depositAmount;
+    amount.value = '';
+    return amount;
 }
 
 document.getElementById('deposit-btn').addEventListener('click', function() {
@@ -28,6 +28,4 @@ document.getElementById('withdraw-btn').addEventListener('click', function() {
     // Update withdraw balance and main balance
     withdrawBalanceText.innerText = withdrawBalance + withdrawInputBalance;
     mainBalanceText.innerText = mainBalance - withdrawInputBalance;
-    // Clear withdraw input
-    document.getElementById('withdraw-input').value = '';
 })
